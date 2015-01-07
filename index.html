@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+// Belegarbeit IT1
+// s68428 - Thomas Klaue
+// s68394 - Martin Stiehr
+-->
+<html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Belegarbeit IT1 - Aloha Simulation</title>
+    <noscript>
+      <!-- leitet User um, falls JS deaktiviert ist -->
+  	   <meta http-equiv="refresh" content="0; URL=./noscript.html" />
+	</noscript>
+  </head>
+  <body>
+	  <div id ="container">
+	    <canvas id="leinwand" height="308" width="500" title="canvas">bitte JAVASCRIPT aktivieren!</canvas>
+	    <div id="credits">
+	    Martin Stiehr &nbsp;- <i>s68394</i><br/>
+	    Thomas Klaue - <i>s68428</i><br/>
+	    <a href="https://bitbucket.org/maltin__/aloha-simulation/overview" title="watch on bitbucket.org">watch on bitbucket.org</a>
+	    </div>
+		 <div id="buttons">
+		   <button type="button" name="start" onclick="start()">start</button>
+		   <button type="button" name="stop"  onclick="stop()">stop</button>
+		 </div>
+		 
+		 <form name="userInput">
+		   <!-- Die Schieberegler zur Steuerung der Simulation -->
+		   <div id="rangeOutput">
+		    	<p>Anzahl der Teilnehmer: <span id="clientsBarOutput">5</span></p>
+		    	<p>Simulationsgeschwindigkeit: <span id="speedBarOutput">20</span>%</p>
+		      <p>Gesamtkanalzugriffsrate: <span id="rateBarOutput">10</span> %</p>
+		   </div>
+		   <div id="rangeBars">
+			<input type="range" min="1" max="10" id="clientsBar" value="5" onchange="setValue('clientsBarOutput',this.value); clients=parseInt(this.value);" /> <br/>
+	        <input type="range" min="1" max="100" id="speedBar" value="20" onchange="setValue('speedBarOutput',this.value);rate=parseInt(this.value); restart();" /><br />
+		     <input type="range" min="1" max="100" id="rateBar" value="10" onchange="setValue('rateBarOutput',this.value); last=(parseInt(this.value)/100);" />	    
+		   </div>
+	      <div id="dataHeading">
+			  <p style="color:#0033FF">gesendet: </p>
+			  <p style="color:#FF0000">angekommen: </p>    
+			  <p>Durchsatz: </p>                    
+			</div>
+			<div id="dataOutput">
+			  <p><span id="sentOutput" >0</span></p>
+			  <p><span id="arrivedOutput">0</span></p>				
+			  <p><span id="ratio">0</span></p>			
+			</div>
+	    </form>
+	  </div>
+	  <div id="textOutput">&nbsp;
+	    <!-- for debugging only -->
+	  </div>
+	  <script src="aloha.js"></script>
+  </body>
+</html>

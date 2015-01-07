@@ -1,0 +1,78 @@
+#credits
+{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+#container
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 150px;
+	height: 500px;
+	width: 1100px;
+}
+
+#leinwand
+{
+	outline-style: ridge;
+	position: relative;
+	float: right;
+}
+
+#buttons
+{
+	position: relative;
+	top: 280px;
+	left: 360px;
+}
+
+#rangeBars
+{
+	position: relative;
+	top: -200px;
+	left: 350px;	
+	line-height: 68px;
+}
+
+#rangeOutput
+{
+	position: relative;
+	left: 80px;
+	line-height: 50px;
+}
+
+#dataHeading
+{
+	position: relative;
+	float: right;	
+	top: -140px;
+	right: 380px;
+	line-height: 30px;
+}
+
+#dataOutput
+{
+	text-align: right;
+	position: relative;
+	float: right;	
+	top: -140px;
+	right: 150px;
+	line-height: 30px;
+}
+
+body
+{
+	background-image:url("img/aloha.jpg");
+	background-repeat:no-repeat;
+	background-position: center top 5px;
+}
+
+#nojs
+{
+	text-align: center;
+	position: relative;
+	top: 100px;
+}
